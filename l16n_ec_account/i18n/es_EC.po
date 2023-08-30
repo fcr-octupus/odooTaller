@@ -1,0 +1,995 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Ecuador Localization Accounting\n"
+"Language: es-ec\n"
+
+#. module: l10n_ec_account
+#: code:addons/l10n_ec_account/models/account.py:0
+msgid "%s (E)"
+msgstr "%s (E)"
+
+#. module: l10n_ec_account
+#: code:addons/l10n_ec_account/models/account.py:0
+msgid "%s AUT:%s"
+msgstr "%s AUT: %s"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_3rd_party_ids
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_3rd_party_ids
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_3rd_party_ids
+msgid "3rd parties"
+msgstr "Terceros"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_settings_form
+msgid "<span class=\"o_form_label\">Miscellaneous</span>\n"
+"                                <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+msgstr "<span class = \"o_form_label\"> Varios </span>\n"
+"                                <span class = \"fa fa-lg fa-building-o\" title = \"Los valores establecidos aquí son específicos de la empresa\". aria-label = \"Los valores establecidos aquí son específicos de la empresa\". grupos = \"base.group_multi_company\" role = \"img\" />"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_settings_form
+msgid "<span class=\"o_form_label\">Your organization</span>"
+msgstr "<span class = \"o_form_label\">Su organización</span>"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_settings_form
+msgid "<strong>Save</strong> this page and come back\n"
+"                                        here to set up the feature."
+msgstr "<strong>Guarda</strong> esta página y vuelve\n"
+"                                        aquí para configurar la función."
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_acq_country_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_acq_country_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_acq_country_id
+msgid "Acquirer country (comex)"
+msgstr "País adquirente (COMEX / EC)"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_export_amount
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_export_amount
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_export_amount
+msgid "Amount (comex)"
+msgstr "Cantidad (COMEX / EC)"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_foreign_double_taxation
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_foreign_double_taxation
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_foreign_double_taxation
+msgid "Apply double taxation?"
+msgstr "¿Aplica convenio de doble tributación?"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_foreign_legal_regulations
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_foreign_legal_regulations
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_foreign_legal_regulations
+msgid "Apply legal regulations?"
+msgstr "¿Aplica regulaciones locales?"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_move_form
+msgid "Attach a waybill"
+msgstr "Adjuntar una guía de remisión"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_import_journal_creation__l10n_ec_display_auth
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_journal__l10n_ec_display_auth
+msgid "Authorization"
+msgstr "Autorización"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_import_journal_creation__l10n_ec_auth_number
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_auth_number
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_journal__l10n_ec_auth_number
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_auth_number
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move_reversal__l10n_ec_auth_number
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_auth_number
+msgid "Authorization number"
+msgstr "Numero de autorización"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_import_journal_creation__l10n_ec_auto_sequence
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_journal__l10n_ec_auto_sequence
+msgid "Auto sequence?"
+msgstr "¿Secuencia automática?"
+
+#. module: l10n_ec_account
+#: code:addons/l10n_ec_account/models/account_move.py:0
+msgid "Base of %s"
+msgstr "Base de %s"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_import_journal_creation__l10n_ec_branch_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_journal__l10n_ec_branch_id
+msgid "Branch"
+msgstr "Establecimiento"
+
+#. module: l10n_ec_account
+#: model:ir.model,name:l10n_ec_account.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: l10n_ec_account
+#: model:ir.model,name:l10n_ec_account.model_res_config_settings
+msgid "Config Settings"
+msgstr "Ajustes de configuración"
+
+#. module: l10n_ec_account
+#: model:ir.model,name:l10n_ec_account.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_export_correlative
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_export_correlative
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_export_correlative
+msgid "Correlative (comex)"
+msgstr "Correlativo (comex)"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_country_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_country_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_country_id
+msgid "Country code"
+msgstr "Código de país"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_export_date
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_export_date
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_export_date
+msgid "Date (comex)"
+msgstr "Fecha (comex)"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_payment_method_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_payment_method_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_payment_method_id
+msgid "Default payment method"
+msgstr "Método de pago por defecto"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_move_form
+msgid "Destination"
+msgstr "Destino"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_dst_country_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_dst_country_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_dst_country_id
+msgid "Destination country (comex)"
+msgstr "País de destino (comex)"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_dst_port
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_dst_port
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_dst_port
+msgid "Destination port (comex)"
+msgstr "Puerto de destino (comex)"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_waybill_dst_ids
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_waybill_dst_ids
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_waybill_dst_ids
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_move_form
+msgid "Destinations"
+msgstr "Destinos"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_debit_note__display_name
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_journal__display_name
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__display_name
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move_reversal__display_name
+#: model:ir.model.fields,field_description:l10n_ec_account.field_ir_actions_report__display_name
+#: model:ir.model.fields,field_description:l10n_ec_account.field_l10n_latam_document_type__display_name
+#: model:ir.model.fields,field_description:l10n_ec_account.field_res_company__display_name
+#: model:ir.model.fields,field_description:l10n_ec_account.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:l10n_ec_account.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_export_district_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_export_district_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_export_district_id
+msgid "District (comex)"
+msgstr "Distrito (COMEX / EC)"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_import_journal_creation__l10n_ec_document_ro
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_journal__l10n_ec_document_ro
+msgid "Document fields readonly? (EC)"
+msgstr "¿Campos de documento de solo lectura? (EC)"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_import_journal_creation__l10n_ec_document_type_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_journal__l10n_ec_document_type_id
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_account_journal_form
+msgid "Document type"
+msgstr "Tipo de Documento"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_account_journal_form
+msgid "Documents"
+msgstr "Documentos"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_move_form
+msgid "Driver"
+msgstr "Conductor"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_settings_form
+msgid "Ecuadorian Localization"
+msgstr "Localización ecuatoriana"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_move_form
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_move_reversal_form
+msgid "Ej: 001"
+msgstr "Ej: 001"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_account_journal_form
+msgid "Ej: 001-001"
+msgstr "Ej: 001-001"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_account_journal_form
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_move_form
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_move_reversal_form
+msgid "Ej: 1234567890"
+msgstr "Ej: 1234567890"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_move_form
+msgid "Ej: 1234567890123456789012345678901234567890123456789"
+msgstr "Ej: 1234567890123456789012345678901234567890123456789"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_settings_form
+msgid "Electronic invoicing"
+msgstr "Facturación electrónica"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_res_config_settings__module_l10n_ec_edi
+msgid "Electronic invoicing (EC)"
+msgstr "Facturación electrónica (EC)"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_account_journal_form
+msgid "Emission Point"
+msgstr "Punto de emisión"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_emission_point
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_emission_point
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move_reversal__l10n_ec_emission_point
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_emission_point
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_move_form
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_move_reversal_form
+msgid "Emission point"
+msgstr "Punto de emisión"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_import_journal_creation__l10n_ec_emission_point_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_journal__l10n_ec_emission_point_id
+msgid "Emission point (EC)"
+msgstr "Punto de emisión (EC)"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_settings_form
+msgid "Enable electronic invoicing for Ecuador"
+msgstr "Habilitar la facturación electrónica para Ecuador"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_move_form
+msgid "Ends at"
+msgstr "Finaliza en"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_export_type_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_export_type_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_export_type_id
+msgid "Export type (comex)"
+msgstr "Tipo de exportación (COMEX / EC)"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_fiscal_regime_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_fiscal_regime_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_fiscal_regime_id
+msgid "Fiscal regime"
+msgstr "Régimen fiscal"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_settings_form
+msgid "Fiscal reports"
+msgstr "Informes fiscales"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_res_config_settings__module_l10n_ec_reports
+msgid "Fiscal reports (EC)"
+msgstr "Informes fiscales (CE)"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_foreign_income_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_foreign_income_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_foreign_income_id
+msgid "Foreign income (comex)"
+msgstr "Ingresos extranjeros (comex)"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_foreign_income_tax
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_foreign_income_tax
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_foreign_income_tax
+msgid "Foreign income tax"
+msgstr "Impuesto sobre la renta extranjero"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_foreign_income_tax_ok
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_foreign_income_tax_ok
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_foreign_income_tax_ok
+msgid "Foreign income taxed?"
+msgstr "¿Ingresos extranjeros gravados?"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_move_form
+msgid "Foreign trade"
+msgstr "Comercio Exterior"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_settings_form
+msgid "Generate your tax returns easily. (ATS, VAT, IT, DINARDAP, etc.)"
+msgstr "Genere sus declaraciones de impuestos fácilmente. (ATS, IVA, IR, DINARDAP, etc.)"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_debit_note__id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_journal__id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move_line__id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move_reversal__id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_ir_actions_report__id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_l10n_latam_document_type__id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_res_company__id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_res_config_settings__id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_res_partner__id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_import_journal_creation__l10n_ec_internal_type
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_journal__l10n_ec_internal_type
+msgid "Internal type"
+msgstr "Tipo interno"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_import_journal_creation__l10n_ec_electronic
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_electronic
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_journal__l10n_ec_electronic
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_electronic
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move_reversal__l10n_ec_electronic
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_electronic
+msgid "Is Electronic?"
+msgstr "¿Es electrónico?"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_internal
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_internal
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move_reversal__l10n_ec_internal
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_internal
+msgid "Is Internal?"
+msgstr "¿Es interno?"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_waybill_ok
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_waybill_ok
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_waybill_ok
+msgid "Is a waybill"
+msgstr "Es una guía de remisión"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_import_journal_creation__l10n_ec_internal
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_journal__l10n_ec_internal
+msgid "Is internal?"
+msgstr "¿Es interno?"
+
+#. module: l10n_ec_account
+#: model:ir.model,name:l10n_ec_account.model_account_journal
+msgid "Journal"
+msgstr "Diario"
+
+#. module: l10n_ec_account
+#: model:ir.model,name:l10n_ec_account.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: l10n_ec_account
+#: model:ir.model,name:l10n_ec_account.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte contable"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_res_company__l10n_ec_keep_accounting
+msgid "Keep accounting?"
+msgstr "¿Obligado a llevar contabilidad?"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_available_support_ids
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_available_support_ids
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_available_support_ids
+msgid "L10N Ec Available Support"
+msgstr "Tipos de soporte disponibles"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_available_tx_ids
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_available_tx_ids
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_available_tx_ids
+msgid "L10N Ec Available Tx"
+msgstr "Tipos de transacción disponibles"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_debit_note____last_update
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_journal____last_update
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move____last_update
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move_reversal____last_update
+#: model:ir.model.fields,field_description:l10n_ec_account.field_ir_actions_report____last_update
+#: model:ir.model.fields,field_description:l10n_ec_account.field_l10n_latam_document_type____last_update
+#: model:ir.model.fields,field_description:l10n_ec_account.field_res_company____last_update
+#: model:ir.model.fields,field_description:l10n_ec_account.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:l10n_ec_account.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_settings_form
+msgid "Manage branches"
+msgstr "Administrar sucursales"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_settings_form
+msgid "Manage your stores and emission points"
+msgstr "Gestiona tus tiendas y puntos de emisión"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_modified_move_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_modified_move_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_modified_move_id
+msgid "Modified document"
+msgstr "Documento modificado"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_move_form
+msgid "Payment details"
+msgstr "Detalles del pago"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_payment_ids
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_payment_ids
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_payment_ids
+msgid "Payments"
+msgstr "Pagos"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_move_form
+msgid "Plate"
+msgstr "Placa"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_refund_line_ids
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_refund_line_ids
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_refund_line_ids
+msgid "Refund lines"
+msgstr "Líneas de reembolso"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_res_company__l10n_ec_refund_product_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_res_config_settings__l10n_ec_refund_product_id
+msgid "Refund product"
+msgstr "Reembolso de producto"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_move_form
+msgid "Refunds"
+msgstr "Reembolsos"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_export_regime_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_export_regime_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_export_regime_id
+msgid "Regime (comex)"
+msgstr "Régimen (comex)"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_related_party
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_related_party
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_related_party
+#: model:ir.model.fields,field_description:l10n_ec_account.field_res_partner__l10n_ec_related_party
+#: model:ir.model.fields,field_description:l10n_ec_account.field_res_users__l10n_ec_related_party
+msgid "Related party?"
+msgstr "¿Parte relacionada?"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_require_payment
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_require_payment
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_require_payment
+msgid "Require payment details?"
+msgstr "¿Requiere detalles de pago?"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_serial_entity
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_serial_entity
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move_reversal__l10n_ec_serial_entity
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_serial_entity
+msgid "Serial entity"
+msgstr "Código de establecimiento"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_move_form
+msgid "Source"
+msgstr "Origen"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_src_port
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_src_port
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_src_port
+msgid "Source port (comex)"
+msgstr "Puerto de origen (COMEX / EC)"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_res_company__l10n_ec_special_taxpayer_code
+msgid "Special taxpayer code"
+msgstr "Código de contribuyente especial"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_res_company__l10n_ec_special_taxpayer
+msgid "Special taxpayer?"
+msgstr "¿Es contribuyente especial?"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_move_form
+msgid "Starts at"
+msgstr "Empieza en"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_support_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_support_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_support_id
+msgid "Support"
+msgstr "Soporte"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_move_form
+msgid "Tax details"
+msgstr "Detalle de impuestos"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_move_form
+msgid "Third party details"
+msgstr "Detalle de terceros"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_settings_form
+msgid "This product will be used in refund invoices (document code: 41)"
+msgstr "Este producto se utilizará en facturas de reembolso (código de documento: 41)"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "Total"
+msgstr "Total"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_tx_type_code
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_tx_type_code
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_tx_type_code
+msgid "Transaction code (EC)"
+msgstr "Código de transacción (EC)"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_tx_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_tx_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_tx_id
+msgid "Transaction type"
+msgstr "Tipo de transacción"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_export_transport
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_export_transport
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_export_transport
+msgid "Transport number (comex)"
+msgstr "Número de transporte (COMEX / EC)"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_incoterm_untaxed_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_incoterm_untaxed_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_incoterm_untaxed_id
+msgid "Untaxed incoterm"
+msgstr "Incoterm no tributable"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_use_support
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_use_support
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_use_support
+msgid "Use document support?"
+msgstr "¿Utilizar soporte de documentos?"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_vat_bases
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_vat_bases
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_vat_bases
+msgid "VAT Bases"
+msgstr "Bases de IVA"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_move_form
+msgid "Waybill"
+msgstr "Guía de remisión"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_waybill_dst
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_waybill_dst
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_waybill_dst
+msgid "Waybill destination address"
+msgstr "Dirección de destino"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_waybill_partner_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_waybill_partner_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_waybill_partner_id
+msgid "Waybill driver"
+msgstr "Conductor"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_waybill_ends
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_waybill_ends
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_waybill_ends
+msgid "Waybill ends at"
+msgstr "Fecha fin (G/R)"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_waybill_plate
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_waybill_plate
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_waybill_plate
+msgid "Waybill plate"
+msgstr "Placa (G/R)"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_waybill_src
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_waybill_src
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_waybill_src
+msgid "Waybill source address"
+msgstr "Dirección de origen (G/R)"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_waybill_starts
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_waybill_starts
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_waybill_starts
+msgid "Waybill starts at"
+msgstr "Fecha de inicio (G/R)"
+
+#. module: l10n_ec_account
+#: code:addons/l10n_ec_account/models/account_move.py:0
+#: code:addons/l10n_ec_account/models/account_move.py:0
+msgid "You are not specified any destination path in the waybill"
+msgstr "No se le ha especificado ninguna ruta de destino en la guía de remisión"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "<br/>\n"
+"                                No:"
+msgstr "<br/>\n"
+"                                No:"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "<br/>\n"
+"                        <strong>Fecha de emisión (comprobante a modificar): </strong>"
+msgstr "<br/>\n"
+"                        <strong> Fecha de emisión (comprobante a modificar): </strong>"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "<br/><strong>Due Date: </strong>"
+msgstr "<br/> <strong> Fecha de vencimiento: </strong>"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "<br/><strong>Incoterm:</strong>"
+msgstr "<br/> <strong> Incoterm: </strong>"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "<br/><strong>Payment Terms: </strong>"
+msgstr "<br/> <strong> Condiciones de pago: </strong>"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "<br/><strong>Reference:</strong>"
+msgstr "<br/> <strong> Referencia: </strong>"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "<br/><strong>Source:</strong>"
+msgstr "<br/> <strong> Fuente: </strong>"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "<span groups=\"account.group_show_line_subtotals_tax_included\">Amount</span>"
+msgstr "<span groups = \"account.group_show_line_subtotals_tax_included\"> Cantidad </span>"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "<span>% VAT</span>"
+msgstr "<span>% de IVA </span>"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "<span>Code</span>"
+msgstr "<span> Código </span>"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "<span>Modified amount</span>"
+msgstr "<span> Importe modificado </span>"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "<span>Reason</span>"
+msgstr "<span> Razón </span>"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "<strong>Comprobante modificado: </strong>"
+msgstr "<strong> Comprobante modificado: </strong>"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "<strong>Contribuyente especial:</strong>"
+msgstr "<strong> Contribuyente especial: </strong>"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "<strong>Customer: </strong>"
+msgstr "<strong> Cliente: </strong>"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "<strong>Dirección Matriz:</strong><br/>"
+msgstr "<strong> Dirección Matriz: </strong> <br/>"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "<strong>Discount</strong>"
+msgstr "<strong> Descuento </strong>"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "<strong>Emission Date: </strong>"
+msgstr "<strong> Fecha de emisión: </strong>"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "<strong>Número de Autorización</strong><br/>"
+msgstr "<strong> Número de Autorización </strong> <br/>"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "<strong>Obligado a llevar contabilidad:</strong>"
+msgstr "<strong> Obligado a llevar contabilidad: </strong>"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "<strong>Payments</strong><br/>"
+msgstr "<strong> Pagos </strong> <br/>"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "<strong>Razón de modificación: </strong>"
+msgstr "<strong> Razón de modificación: </strong>"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "<strong>Sucursal:</strong><br/>"
+msgstr "<strong> Sucursal: </strong> <br/>"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_move_form
+msgid "ATS Settings"
+msgstr "Configuración de ATS"
+
+#. module: l10n_ec_account
+#: model:ir.model,name:l10n_ec_account.model_account_move_reversal
+msgid "Account Move Reversal"
+msgstr "Reversión del movimiento"
+
+#. module: l10n_ec_account
+#: model:ir.model,name:l10n_ec_account.model_account_debit_note
+msgid "Add Debit Note wizard"
+msgstr "Wizard Agregar Nota Débito"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,help:l10n_ec_account.field_account_bank_statement_line__l10n_latam_internal_type
+#: model:ir.model.fields,help:l10n_ec_account.field_account_move__l10n_latam_internal_type
+#: model:ir.model.fields,help:l10n_ec_account.field_account_payment__l10n_latam_internal_type
+msgid "Analog to odoo account.move.move_type but with more options allowing to identify the kind of document we are working with. (not only related to account.move, could be for documents of other models like stock.picking)"
+msgstr "Análogo a odoo account.move.move_type pero con más opciones que permiten identificar el tipo de documento con el que estamos trabajando. (no solo relacionado con account.move, podría ser para documentos de otros modelos como stock.picking)"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "Base"
+msgstr "Base"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move_reversal__country_code
+msgid "Country Code"
+msgstr "Código de país"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "Customer:"
+msgstr "Cliente:"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "Date"
+msgstr "Fecha"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_import_journal_creation__l10n_ec_payment_method_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_journal__l10n_ec_payment_method_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_res_partner__l10n_ec_payment_method_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_res_users__l10n_ec_payment_method_id
+msgid "Default payment method (EC)"
+msgstr "Método de pago predeterminado (EC)"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_res_partner__l10n_ec_payment_method_supplier_id
+#: model:ir.model.fields,field_description:l10n_ec_account.field_res_users__l10n_ec_payment_method_supplier_id
+msgid "Default payment method for suppliers (EC)"
+msgstr "Método de pago predeterminado para proveedores (EC)"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_partner_form
+msgid "Ecuador localization settings"
+msgstr "Configuración de localización de Ecuador"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "Identification"
+msgstr "Identificación"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_move_form
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.view_partner_form
+msgid "Is related party?"
+msgstr "¿Es parte relacionada?"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_latam_internal_type
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_latam_internal_type
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_latam_internal_type
+msgid "LATAM internal type"
+msgstr "Tipo interno LATAM"
+
+#. module: l10n_ec_account
+#: model:ir.model,name:l10n_ec_account.model_l10n_latam_document_type
+msgid "Latam Document Type"
+msgstr "Tipo de Documento Latam"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "Logo"
+msgstr "Logo"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_modified_reason
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_modified_reason
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_modified_reason
+msgid "Modification reason"
+msgstr "Motivo de la modificación"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move_line__name_without_code
+msgid "Name Without Code"
+msgstr "Nombre sin código"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "Number"
+msgstr "Número"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "RUC"
+msgstr "RUC"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "Refund details"
+msgstr "Detalles del reembolso"
+
+#. module: l10n_ec_account
+#: model:ir.model,name:l10n_ec_account.model_ir_actions_report
+msgid "Report Action"
+msgstr "Acción de informe"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "Supplier:"
+msgstr "Proveedor:"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "Tax"
+msgstr "Impuesto"
+
+#. module: l10n_ec_account
+#: code:addons/l10n_ec_account/wizard/account_debit_note.py:0
+#: code:addons/l10n_ec_account/wizard/account_move_reversal.py:0
+msgid "This document cannot be reversed with a credit note"
+msgstr "Este documento no se puede revertir con una nota de crédito"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "Total Tax"
+msgstr "Total impuestos"
+
+#. module: l10n_ec_account
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_bank_statement_line__l10n_ec_tx_code
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_move__l10n_ec_tx_code
+#: model:ir.model.fields,field_description:l10n_ec_account.field_account_payment__l10n_ec_tx_code
+msgid "Transaction type code (EC)"
+msgstr "Código de tipo de transacción (EC)"
+
+#. module: l10n_ec_account
+#: model_terms:ir.ui.view,arch_db:l10n_ec_account.report_invoice_document
+msgid "Type"
+msgstr "Tipo"
+
+#. module: l10n_ec_account
+#: code:addons/l10n_ec_account/wizard/account_move_reversal.py:0
+msgid "You can only apply a credit note for an invoice"
+msgstr "Solo puede aplicar una nota de crédito para una factura"
+
+#. module: l10n_ec_account
+#: code:addons/l10n_ec_account/wizard/account_debit_note.py:0
+msgid "You can only apply a debit note for an invoice"
+msgstr "Solo puede aplicar una nota de débito para una factura"
+
+#. module: l10n_ec_account
+#: code:addons/l10n_ec_account/wizard/account_move_reversal.py:0
+msgid "You can only reverse documents with legal invoicing documents from Latin America one at a time.\n"
+"Problematic documents: %s"
+msgstr "Solo puede revertir documentos con documentos legales de facturación de América Latina uno a la vez.\n"
+"Documentos problemáticos: %s"
+
+#. module: l10n_ec_account
+#: code:addons/l10n_ec_account/wizard/account_move_reversal.py:0
+msgid "You cannot reverse an external move with an internal journal"
+msgstr "No puede revertir un movimiento externo con un diario interno"
+
+#. module: l10n_ec_account
+#: code:addons/l10n_ec_account/wizard/account_move_reversal.py:0
+msgid "You cannot reverse an internal move with an external journal"
+msgstr "No se puede revertir un movimiento interno con un diario externo"
+
+#. module: l10n_ec_account
+#: code:addons/l10n_ec_account/wizard/account_move_reversal.py:0
+msgid "You must choose a credit note type journal"
+msgstr "Debe elegir un diario de tipo de nota de crédito"
+
+#. module: l10n_ec_account
+#: code:addons/l10n_ec_account/wizard/account_debit_note.py:0
+msgid "You must choose a debit note type journal"
+msgstr "Debe elegir un diario de tipo de nota de débito"
+
+#. module: l10n_ec_account
+#: code:addons/l10n_ec_account/wizard/account_debit_note.py:0
+#: code:addons/l10n_ec_account/wizard/account_move_reversal.py:0
+msgid "You must specify a reason to complete this operation"
+msgstr "Debes especificar un motivo para completar esta operación"

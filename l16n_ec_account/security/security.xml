@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record id="base.user_root" model="res.users">
+            <field name="groups_id" eval="[(4, ref('group_ec'))]"/>
+        </record>
+
+        <record id="base.user_admin" model="res.users">
+            <field name="groups_id" eval="[(4, ref('group_ec'))]"/>
+        </record>
+
+        <record id="rule_l10n_ec_emission_point_multi_company" model="ir.rule">
+            <field name="name">Emission Point</field>
+            <field name="model_id" ref="l10n_ec_base.model_l10n_ec_emission_point"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+        </record>
+
+        <record id="rule_l10n_ec_branch_multi_company" model="ir.rule">
+            <field name="name">Emission Point</field>
+            <field name="model_id" ref="l10n_ec_base.model_l10n_ec_branch"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+        </record>
+    </data>
+</odoo>

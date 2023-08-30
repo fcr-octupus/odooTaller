@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record id="invoice_paperformat" model="report.paperformat">
+            <field name="name">A4</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">5</field>
+            <field name="margin_bottom">5</field>
+            <field name="margin_left">5</field>
+            <field name="margin_right">5</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">5</field>
+            <field name="dpi">90</field>
+        </record>
+    </data>
+
+    <data>
+        <template id="custom_header"/>
+
+        <template id="contact_address">
+            <t t-raw="0"/>
+            <t t-set="contact_data1"
+               t-value="', '.join(list(filter(None, [contact_address.city, contact_address.state_id.name, contact_address.country_id.name])))"/>
+            <t t-set="contact_data2"
+               t-value="', '.join(list(filter(None, [contact_address.email, contact_address.phone, 'mobile' in contact_address and contact_address.mobile])))"/>
+            <span t-esc="contact_address.street"/>
+            <t t-if="contact_data1"><br/><span t-esc="contact_data1"/></t>
+            <t t-if="contact_data2"><br/><span t-esc="contact_data2"/></t>
+        </template>
+
+        <template id="report_invoice_document" inherit_id="account.report_invoice_document" primary="True">
+            <t t-set="o" position="after">
+                <t t-set="custom_header" t-value="'l10n_ec_account.custom_header'" t-if="o.l10n_ec_electronic"/>
+                <t t-set="report_date" t-value="o.invoice_date"/>
+                <t t-set="report_number" t-value="o.l10n_latam_document_number"/>
+                <t t-set="display_discount" t-value="any(l.discount for l in o.invoice_line_ids)"/>
+                <t t-set="display_product_code" t-value="any(l.product_id.default_code for l in o.invoice_line_ids)"/>
+                <style>
+                    body {
+                    font-size: 10pt
+                    }
+                    .edi-round {
+                    border: 1px solid black;
+                    border-radius: 10px;
+                    padding: 5px;
+                    }
+                    .edi_header_sender_left {
+                    margin-right: 4%;
+                    }
+                    .edi_header_sender_left, .edi_header_sender_right {
+                    width: 48%;
+                    }
+                </style>
+                <t t-if="o.l10n_ec_internal">
+                    <t t-set="sender" t-value="o.company_id.partner_id"/>
+                    <t t-set="emission_point" t-value="o.journal_id.l10n_ec_emission_point_id"/>
+                    <t t-set="branch" t-value="emission_point.branch_id"/>
+                    <t t-set="sender_logo" t-value="emission_point.branch_id.image_256 or o.company_id.logo"/>
+                    <t t-set="receiver" t-value="o.commercial_partner_id"/>
+                </t>
+                <t t-else="">
+                    <t t-set="sender" t-value="o.commercial_partner_id"/>
+                    <t t-set="receiver" t-value="o.company_id.partner_id"/>
+                    <t t-set="sender_logo" t-value="o.commercial_partner_id.image_256"/>
+                </t>
+
+                <t t-set="custom_footer">
+                    <div class="row">
+                        <div name="footer_left_column" class="col-8 text-center"/>
+                        <div name="footer_right_column" class="col-4 text-right"/>
+                    </div>
+                </t>
+            </t>
+
+            <!-- remove default partner address -->
+            <t t-set="address" position="replace"/>
+
+            <!-- remove default document title -->
+            <h2 position="replace">
+                <div id="document_header_edi" t-if="o.l10n_ec_electronic" class="row">
+                    <div class="edi_header_sender_left">
+                        <div class="text-center logo">
+                            <t t-if="sender_logo">
+                                <img t-att-src="image_data_uri(sender_logo)" alt="Logo" class="mw-100"
+                                     style="max-height: 160px"/>
+                            </t>
+                        </div>
+                        <div class="mt-4 edi-round">
+                            <div class="col-auto mw-100">
+                                <t t-if="o.l10n_ec_internal and branch and branch.trade_name">
+                                    <h5 class="mt-2" id="trade_name" t-field="branch.trade_name"/>
+                                    <h6 class="mt-2" id="company_name" t-field="sender.name"/>
+                                </t>
+                                <t t-else="">
+                                    <h5 class="mt-2" id="company_name" t-field="sender.name"/>
+                                </t>
+                            </div>
+                            <div class="col-auto mw-100 mt-2" t-call="l10n_ec_account.contact_address"
+                                 t-if="sender.street" name="company_address">
+                                <strong>Dirección Matriz:</strong><br/>
+                                <t t-set="contact_address" t-value="sender"/>
+                            </div>
+                            <t t-if="o.l10n_ec_internal">
+                                <div class="col-auto mw-100 mt-2" t-call="l10n_ec_account.contact_address"
+                                     t-if="emission_point and emission_point.branch_id.street" name="branch_address">
+                                    <strong>Sucursal:</strong><br/>
+                                    <t t-set="contact_address" t-value="emission_point.branch_id"/>
+                                </div>
+                                <div class="col-auto mw-100 mt-2" name="keep_accounting">
+                                    <strong>Obligado a llevar contabilidad:</strong>
+                                    <span t-esc="o.company_id.l10n_ec_keep_accounting and 'SI' or 'NO'"/>
+                                </div>
+                                <div class="col-auto mw-100 mt-2" name="special_taxpayer"
+                                     t-if="o.company_id.l10n_ec_special_taxpayer">
+                                    <strong>Contribuyente especial:</strong>
+                                    <span t-field="o.company_id.l10n_ec_special_taxpayer_code"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                    <div class="edi_header_sender_right edi-round">
+                        <div class="col-auto mw-100 mt-4 text-center" t-if="sender.vat" name="company_vat">
+                            <h5>
+                                <strong><span t-field="sender.l10n_latam_identification_type_id">RUC</span>:</strong>
+                                <span t-field="sender.vat"/>
+                            </h5>
+                        </div>
+                        <div class="col-auto mw-100 mt-2 text-center mt64" name="document_number">
+                            <h5>
+                                <span t-field="o.journal_id.l10n_ec_document_type_id.name"/><br/>
+                                No: <t t-esc="o.name.split()[-1]"/>
+                            </h5>
+                        </div>
+                        <div class="col-auto mw-100 mt-2 text-center" name="auth_number" t-if="o.l10n_ec_auth_number">
+                            <strong>Número de Autorización</strong><br/>
+                            <span t-esc="o.l10n_ec_auth_number"/>
+                        </div>
+                    </div>
+                </div>
+            </h2>
+
+            <div id="informations" position="replace">
+                <div id="informations" class="row mt-2 mb-2 edi-round">
+                    <div class="col-6">
+                        <t t-if="o.l10n_ec_electronic">
+                            <t t-if="o.l10n_ec_internal">
+                                <strong t-if="o.move_type in ('in_invoice', 'in_refund')">Supplier: </strong>
+                                <strong t-if="o.move_type in ('out_invoice', 'out_refund')">Customer: </strong>
+                            </t>
+                            <t t-else="">
+                                <strong>Customer: </strong>
+                            </t>
+                            <span t-field="receiver.name"/>
+                            <t t-if="receiver.vat and receiver.l10n_latam_identification_type_id">
+                                <br/><strong><span t-field="receiver.l10n_latam_identification_type_id"/>
+                                : </strong><span t-esc="receiver.vat"/>
+                            </t>
+                        </t>
+                        <t t-call="l10n_ec_account.contact_address">
+                            <br/>
+                            <t t-set="contact_address" t-value="receiver"/>
+                        </t>
+                    </div>
+                    <div class="col-6">
+                        <t t-if="o.invoice_date">
+                            <strong>Emission Date: </strong>
+                            <span t-field="o.invoice_date"/>
+                        </t>
+                        <t t-if="o.invoice_date_due and o.l10n_latam_document_type_id.internal_type == 'invoice'">
+                            <br/><strong>Due Date: </strong>
+                            <span t-field="o.invoice_date_due"/>
+                        </t>
+
+                        <t t-if="o.invoice_payment_term_id" name="payment_term">
+                            <br/><strong>Payment Terms: </strong><span t-field="o.invoice_payment_term_id.name"/>
+                        </t>
+
+                        <t t-if="o.invoice_origin">
+                            <br/><strong>Source:</strong>
+                            <span t-field="o.invoice_origin"/>
+                        </t>
+
+                        <t t-if="o.ref">
+                            <br/><strong>Reference:</strong>
+                            <span t-field="o.ref"/>
+                        </t>
+
+                        <t t-if="o.invoice_incoterm_id">
+                            <br/><strong>Incoterm:</strong><span t-field="o.invoice_incoterm_id.name"/>
+                        </t>
+                    </div>
+                </div>
+                <div id="modified_document" class="row mt-2 mb-2 edi-round"
+                     t-if="o.l10n_latam_document_type_id.internal_type in ('credit_note', 'debit_note')">
+                    <div class="col-6">
+                        <strong>Comprobante modificado: </strong>
+                        <span t-field="o.l10n_ec_modified_move_id.journal_id.l10n_ec_document_type_id.name"/>
+                        <span t-esc="o.l10n_ec_modified_move_id.name.split()[-1]"/>
+                        <br/>
+                        <strong>Fecha de emisión (comprobante a modificar): </strong>
+                        <span t-esc="o.l10n_ec_modified_move_id.invoice_date"/>
+                        <br/>
+                    </div>
+                    <div class="col-6">
+                        <strong>Razón de modificación: </strong>
+                        <span t-esc="o.l10n_ec_modified_reason"/>
+                    </div>
+                </div>
+            </div>
+
+            <table name="invoice_line_table" position="attributes">
+                <attribute name="t-if">o.l10n_latam_document_type_id.internal_type in ('invoice', 'credit_note',
+                    'purchase_liq')</attribute>
+            </table>
+
+            <table name="invoice_line_table" position="after">
+                <table class="table table-sm o_main_table" name="debit_note_line_table"
+                       t-if="o.l10n_latam_document_type_id.internal_type == 'debit_note'">
+                    <thead>
+                        <tr>
+                            <th name="th_description" class="text-left"><span>Reason</span></th>
+                            <th name="th_quantity" class="text-right"><span>Modified amount</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-set="lines"
+                           t-value="o.invoice_line_ids.sorted(key=lambda l: (-l.sequence, l.date, l.move_name, -l.id), reverse=True)"/>
+                        <t t-foreach="lines" t-as="line">
+                            <tr t-if="not line.display_type" name="debit_note_line">
+                                <td name="debit_note_line_name"><span t-field="line.name"
+                                                                      t-options="{'widget': 'text'}"/></td>
+                                <td name="debit_note_line_amount" class="text-right o_price_total">
+                                    <span class="text-nowrap" t-field="line.price_subtotal"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </table>
+
+            <!-- use latam prices (to include/exclude VAT) -->
+            <xpath expr="//span[@t-field='line.price_unit']" position="attributes">
+                <attribute name="t-field">line.l10n_latam_price_unit</attribute>
+            </xpath>
+
+            <xpath expr="//span[@id='line_tax_ids']" position="attributes">
+                <attribute name="t-esc">', '.join(map(lambda x: (x.description or x.name),
+                    line.l10n_latam_tax_ids))</attribute>
+            </xpath>
+            <t t-set="current_subtotal" t-value="current_subtotal + line.price_subtotal" position="attributes">
+                <attribute name="t-value">current_subtotal + line.l10n_latam_price_subtotal</attribute>
+            </t>
+            <!-- if b2c we still wants the latam subtotal -->
+            <t t-set="current_subtotal" t-value="current_subtotal + line.price_total" position="attributes">
+                <attribute name="t-value">current_subtotal + line.l10n_latam_price_subtotal</attribute>
+            </t>
+            <!-- label amount for subtotal column on b2b and b2c -->
+            <xpath expr="//th[@name='th_subtotal']/span[@groups='account.group_show_line_subtotals_tax_included']"
+                   position="replace">
+                <span groups="account.group_show_line_subtotals_tax_included">Amount</span>
+            </xpath>
+            <span t-field="line.price_subtotal" position="attributes">
+                <attribute name="t-field">line.l10n_latam_price_subtotal</attribute>
+            </span>
+            <!-- if b2c we still wants the latam subtotal -->
+            <span t-field="line.price_total" position="attributes">
+                <attribute name="t-field">line.l10n_latam_price_subtotal</attribute>
+            </span>
+
+            <!-- use column vat instead of taxes and only if vat discriminated -->
+            <xpath expr="//th[@name='th_taxes']/span" position="replace">
+                <span>% VAT</span>
+            </xpath>
+
+            <xpath expr="//th[@name='th_taxes']" position="attributes">
+                <attribute name="t-if">o.amount_by_group</attribute>
+            </xpath>
+
+            <!-- use column vat instead of taxes and only list vat taxes-->
+            <xpath expr="//span[@id='line_tax_ids']/.." position="attributes">
+                <attribute name="t-if">o.amount_by_group</attribute>
+            </xpath>
+            <span id="line_tax_ids" position="attributes">
+                <attribute name="t-esc">', '.join(line.l10n_latam_tax_ids.filtered(lambda x: (x.l10n_ec_tax_group_type
+                    or '').startswith('vat')).mapped(lambda x: x.description or x.name))</attribute>
+            </span>
+
+            <!-- remove payment term, this is added on information section -->
+            <p name="payment_term" position="replace"/>
+
+            <span t-field="o.amount_untaxed" position="attributes">
+                <attribute name="t-field">o.amount_subtotal</attribute>
+            </span>
+
+            <th name="th_description" position="before">
+                <th name="th_product_code" class="text-left" style="width: 15%"><span>Code</span></th>
+            </th>
+
+            <td name="account_invoice_line_name" position="before">
+                <td name="account_invoice_line_product_code" style="max-width: 40px; width: 40px" class="text-left">
+                    <span t-field="line.product_id.default_code"/>
+                </td>
+            </td>
+
+            <span t-field="line.name" position="attributes">
+                <attribute name="t-field">line.name_without_code</attribute>
+            </span>
+
+            <xpath expr="//tr[hasclass('o_subtotal')]" position="after">
+                <tr class="border-black o_discount" style="" t-if="o.total_discount">
+                    <td><strong>Discount</strong></td>
+                    <td class="text-right">
+                        <span t-field="o.total_discount"/>
+                    </td>
+                </tr>
+            </xpath>
+
+            <t t-foreach="o.amount_by_group" position="replace">
+                <tr style="" t-foreach="o.l10n_ec_vat_bases" t-as="amount_by_group">
+                    <td><span class="text-nowrap" t-esc="amount_by_group[0]"/></td>
+                    <td class="text-right o_price_total">
+                        <span class="text-nowrap" t-esc="amount_by_group[2]"/>
+                    </td>
+                </tr>
+                <tr style="" t-foreach="o.amount_by_group" t-as="amount_by_group">
+                    <td><span class="text-nowrap" t-esc="amount_by_group[0]"/></td>
+                    <td class="text-right o_price_total">
+                        <span class="text-nowrap" t-esc="amount_by_group[3]"/>
+                    </td>
+                </tr>
+            </t>
+
+            <xpath expr="//div[@id='total']/div[1]" position="attributes">
+                <attribute name="t-attf-class">#{'col-5' if report_type != 'html' else 'col-sm-5 col-md-5'}</attribute>
+            </xpath>
+
+            <xpath expr="//div[@id='total']" position="attributes">
+                <attribute name="t-if">o.l10n_latam_document_type_id.internal_type in ('invoice', 'credit_note',
+                    'debit_note', 'purchase_liq')</attribute>
+            </xpath>
+
+            <xpath expr="//div[@id='total']/div[1]" position="before">
+                <div t-attf-class="mt-3 #{'col-7' if report_type != 'html' else 'col-sm-7 col-md-7'}" id="info_lines">
+                    <table class="table table-sm" style="page-break-inside: avoid;" id="payment_lines"
+                           t-if="o.l10n_ec_payment_ids">
+                        <tr>
+                            <td colspan="2" class="text-center">
+                                <strong>Payments</strong><br/>
+                            </td>
+                        </tr>
+                        <tr t-foreach="o.l10n_ec_payment_ids" t-as="payment">
+                            <td style="width: 70%">
+                                <span t-field="payment.payment_method_id"/>
+                                <t t-if="payment.term">
+                                    <br/>
+                                    <span t-field="payment.term"/> <span t-field="payment.term_type"/>
+                                </t>
+                            </td>
+                            <td style="width: 30%" class="text-right">
+                                <span t-field="payment.amount"
+                                      t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </xpath>
+
+            <xpath expr="//span[@t-field='o.payment_reference']/../.." position="replace">
+                <t t-if="o.l10n_latam_internal_type in ('invoice', 'purchase_liq')">
+                    <t t-set="refund_lines" t-value="o.l10n_ec_refund_line_ids"/>
+                </t>
+                <div class="row mt-4" t-if="refund_lines">
+                    <table class="table table-sm" style="page-break-inside: avoid" id="refund_lines">
+                        <thead>
+                            <tr>
+                                <td colspan="8" class="text-center">Refund details</td>
+                            </tr>
+                            <tr>
+                                <th class="text-center" style="width: 10%">Date</th>
+                                <th class="text-center" style="width: 10%">Identification</th>
+                                <th class="text-center" style="width: 20%">Type</th>
+                                <th class="text-center" style="width: 20%">Number</th>
+                                <th class="text-center" style="width: 10%">Tax</th>
+                                <th class="text-right" style="width: 10%">Base</th>
+                                <th class="text-right" style="width: 10%">Total Tax</th>
+                                <th class="text-right" style="width: 10%">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="refund_lines" t-as="refund">
+                                <t t-set="taxes_len" t-value="len(refund.tax_ids)"/>
+                                <t t-foreach="refund.tax_ids" t-as="tax" t-if="taxes_len">
+                                    <tr>
+                                        <t t-if="tax_index == 0">
+                                            <td class="text-center" t-att-rowspan="taxes_len" style="vertical-align: middle">
+                                                <span t-field="refund.date"/>
+                                            </td>
+                                            <td class="text-center" t-att-rowspan="taxes_len" style="vertical-align: middle">
+                                                <span t-field="refund.partner_id.vat"/>
+                                            </td>
+                                            <td class="text-center" t-att-rowspan="taxes_len" style="vertical-align: middle">
+                                                <span t-field="refund.document_type_id.internal_type"/>
+                                            </td>
+                                            <td class="text-center" t-att-rowspan="taxes_len" style="vertical-align: middle">
+                                                <span t-field="refund.serial_entity"/>-<span
+                                                    t-field="refund.emission_point"/>-<span
+                                                    t-esc="refund.document_number.zfill(9)"/></td>
+                                        </t>
+                                        <td class="text-center"><span t-field="tax.tax_id"/></td>
+                                        <td class="text-right"><span t-field="tax.base"
+                                                                     t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/></td>
+                                        <td class="text-right"><span t-field="tax.amount"
+                                                                     t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/></td>
+                                        <t t-if="tax_index == 0">
+                                            <td class="text-right" t-att-rowspan="taxes_len" style="vertical-align: middle">
+                                                <span t-field="refund.amount_total" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                                            </td>
+                                        </t>
+                                    </tr>
+                                </t>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+            </xpath>
+        </template>
+
+        <template id="report_invoice" inherit_id="account.report_invoice">
+            <xpath expr='//t[@t-call="account.report_invoice_document"]' position="after">
+                <t t-if="o._get_name_invoice_report() == 'l10n_ec_account.report_invoice_document'"
+                   t-call="l10n_ec_account.report_invoice_document" t-lang="lang"/>
+            </xpath>
+        </template>
+
+        <template id="report_invoice_with_payments" inherit_id="account.report_invoice_with_payments">
+            <xpath expr='//t[@t-call="account.report_invoice_document"]' position="after">
+                <t t-if="o._get_name_invoice_report() == 'l10n_ec_account.report_invoice_document'"
+                   t-call="l10n_ec_account.report_invoice_document" t-lang="lang"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

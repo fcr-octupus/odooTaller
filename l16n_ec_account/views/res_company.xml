@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record id="view_company_form" model="ir.ui.view">
+            <field name="name">res.company.form</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <field name="vat" position="attributes">
+                    <attribute name="attrs">{'required': [('country_code', '=', 'EC')]}</attribute>
+                </field>
+                <field name="vat" position="after">
+                    <field name="l10n_ec_keep_accounting" groups="base.group_no_one" attrs="{'invisible': [('country_code', '!=', 'EC')]}"/>
+                    <field name="l10n_ec_special_taxpayer" groups="base.group_no_one"/>
+                    <field name="l10n_ec_special_taxpayer_code"
+                           attrs="{'invisible': ['|', ('country_code', '!=', 'EC'), ('l10n_ec_special_taxpayer', '=', False)],
+                                   'required': [('country_code', '=', 'EC'), ('l10n_ec_special_taxpayer', '=', True)]}"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>
