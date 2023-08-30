@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Heredar la vista de account.journal -->
+        <record model="ir.ui.view" id="view_account_journal_inherit_octupus">
+            <field name="model">account.journal</field>
+            <field name="name">account.journal.octupus</field>
+            <field name="inherit_id" ref="account.view_account_journal_form" />
+            <field name="arch" type="xml">
+                <field name="type" position="after">
+                    <field name="is_apply_r_guide"
+                        attrs="{'invisible': [('type', '!=', 'general')]}" widget="boolean_toggle" />
+                </field>
+                <field name="is_apply_r_guide" position="after">
+                    <field name="l10n_ec_entity" placeholder="001"
+                        attrs="{'invisible': [('is_apply_r_guide', '!=', True)]}" required="True" />
+                    <field name="l10n_ec_emission" placeholder="001"
+                        attrs="{'invisible': [('is_apply_r_guide', '!=', True)]}" required="True" />
+                    <field name="l10n_ec_emission_address_id"
+                        attrs="{'invisible': [('is_apply_r_guide', '!=', True)]}" required="True" />
+                </field>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>
