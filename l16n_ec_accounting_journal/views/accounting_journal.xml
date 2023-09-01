@@ -11,14 +11,19 @@
                     <field name="is_apply_r_guide"
                         attrs="{'invisible': [('type', '!=', 'general')]}" widget="boolean_toggle" />
                 </field>
-                <field name="is_apply_r_guide" position="after">
+                <xpath expr="//field[@name='is_apply_r_guide']" position="after">
                     <field name="l10n_ec_entity" placeholder="001"
-                        attrs="{'invisible': [('is_apply_r_guide', '!=', True)]}" required="True" />
+                        attrs="{'invisible': ['|', ('is_apply_r_guide', '=', False), ('type', '!=', 'general')], 'required':true}" />
+                </xpath>
+                <xpath expr="//field[@name='l10n_ec_entity']" position="after">
                     <field name="l10n_ec_emission" placeholder="001"
-                        attrs="{'invisible': [('is_apply_r_guide', '!=', True)]}" required="True" />
+                        attrs="{'invisible': ['|', ('is_apply_r_guide', '=', False), ('type', '!=', 'general')], 'required':true}" />
+                </xpath>
+                <xpath expr="//field[@name='l10n_ec_emission']" position="after">
                     <field name="l10n_ec_emission_address_id"
-                        attrs="{'invisible': [('is_apply_r_guide', '!=', True)]}" required="True" />
-                </field>
+                        attrs="{'invisible': ['|', ('is_apply_r_guide', '=', False), ('type', '!=', 'general')], 'required':true}" />
+                </xpath>                                       
+                                          
             </field>
         </record>
 
