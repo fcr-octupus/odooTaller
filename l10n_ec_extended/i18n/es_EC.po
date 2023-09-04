@@ -1,0 +1,5 @@
+msgid "¿Do you offer transportation services?"
+msgstr "¿Ofrece servicios de transporte?"
+
+msgid "License Plate Number"
+msgstr "Número de placa del vehículo"
