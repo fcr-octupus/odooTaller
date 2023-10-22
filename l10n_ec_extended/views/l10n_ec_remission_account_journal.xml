@@ -13,20 +13,17 @@
                 </field>
                 <xpath expr="//field[@name='is_apply_r_guide']" position="after">
                     <field name="l10n_ec_entity" placeholder="001"
-                        attrs="{'invisible': ['|', ('is_apply_r_guide', '=', False), ('type', '!=', 'general')], 'required':true}" />
+                        attrs="{'required': [('type', '=', 'general')], 'invisible': ['|', ('is_apply_r_guide', '=', False), ('type', '!=', 'general')]}" />
                 </xpath>
                 <xpath expr="//field[@name='l10n_ec_entity']" position="after">
                     <field name="l10n_ec_emission" placeholder="001"
-                        attrs="{'invisible': ['|', ('is_apply_r_guide', '=', False), ('type', '!=', 'general')], 'required':true}" />
+                        attrs="{'required': [('type', '=', 'general')], 'invisible': ['|', ('is_apply_r_guide', '=', False), ('type', '!=', 'general')]}" />
                 </xpath>
                 <xpath expr="//field[@name='l10n_ec_emission']" position="after">
                     <field name="l10n_ec_emission_address_id"
-                        attrs="{'invisible': ['|', ('is_apply_r_guide', '=', False), ('type', '!=', 'general')], 'required':true}" />
+                        attrs="{'required': [('type', '=', 'general')], 'invisible': ['|', ('is_apply_r_guide', '=', False), ('type', '!=', 'general')]}" />
                 </xpath>                                       
-                                          
             </field>
         </record>
-
-
     </data>
 </odoo>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="guia_remision_action" model="ir.actions.act_window">
+            <field name="name">Guía de Remisión</field>
+            <field name="res_model">guia.remision</field>
+            <field name="view_mode">tree,form</field> <!-- Agregamos 'form' para ver detalles individuales -->
+        </record>
+
+        <record id="guia_remision_tree_view" model="ir.ui.view">
+            <field name="name">guia_remision.tree.view</field>
+            <field name="model">guia.remision</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="date" string="Fecha" />
+                    <field name="factura_cliente" string="Factura Cliente" />
+                    <field name="state" string="Estado" />
+                </tree>
+            </field>
+        </record>
+
+        <menuitem name="Guía de Remisión" id="remission_guide"
+            parent="account.menu_finance_receivables" action="guia_remision_action" sequence="150" />
+            
+        <record id="guia_remision_form_view" model="ir.ui.view">
+            <field name="name">guia_remision.form.view</field>
+            <field name="model">guia.remision</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_post" string="Post" class="oe_highlight" type="object" groups="account.group_account_invoice" data-hotkey="v" attrs="{'invisible' : [ ('state', '=', 'posted')]}"/>
+                        <button name="action_unpost" string="Reset to Draft" type="object" data-hotkey="q"  attrs="{'invisible' : [ ('state', '=', 'draft')]}"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,posted"/>
+                    </header>
+                    <sheet>
+                        <group string="GUÍA DE REMISIÓN">
+                            <group>
+                                <field name="date" string="Fecha" />
+                                <field name="motivo_traslado" string="Motivo de traslado" />
+                                <field name="l10n_ec_authorization_number" string="Número de Autorización prueba" attrs="{'invisible' : [ ('state', '!=', 'posted')]}" />
+                            </group>
+                            <group>
+                                <field name="diario" string="Diario" />
+                                <field name="ruta" string="Ruta" />
+                            </group>
+                        </group>
+                        <group string="INFORMACIÓN DE TRANSPORTISTA">
+                            <field name="partner_id" string="Transportista" />
+                            <field name="license_plate" string="Numero de placa" />
+                            <field name="fecha_inicio" string="Fecha inicio" />
+                            <field name="fecha_fin" string="Fecha fin" />
+                            <field name="direccion_partida" string="Direccion de partida" />
+                            <field name="company_partner_id" string="Company Partner Id" invisible="1"/>
+                        </group>
+                        <notebook>
+                            <page string="Destinatarios">
+                                <group string="DESPACHOS">
+                                    <field name="despachos" string=""/>
+                                </group>
+                                <group string="FACTURA CLIENTE">
+                                    <field name="factura_cliente" string=""/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet> 
+                    <div class="o_attachment_preview" />
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

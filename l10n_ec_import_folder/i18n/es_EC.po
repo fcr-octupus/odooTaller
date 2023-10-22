@@ -1,0 +1,867 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* import_folder
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-12 19:56+0000\n"
+"PO-Revision-Date: 2021-08-12 19:56+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: es_EC\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_report__nbr
+msgid "Lines Number"
+msgstr "# de Lineas"
+
+#. module: import_folder
+#: model:ir.model.fields.selection,name:import_folder.selection__import_folder__state__open
+msgid "Open"
+msgstr "Abierto"
+
+#. module: import_folder
+#: model_terms:ir.ui.view,arch_db:import_folder.view_import_folder_form
+msgid "Open Import"
+msgstr "Abrir Importación"
+
+#. module: import_folder
+#: model:ir.model,name:import_folder.model_account_account
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_report__account_id
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__message_needaction
+msgid "Action Needed"
+msgstr "Acción Requerida"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Decoración de excepción de actividad"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__activity_state
+msgid "Activity State"
+msgstr "Estados de Actividad"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Tipo de icono de Actividad"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__warehouse
+msgid "Warehouse"
+msgstr "Almacén"
+
+#. module: import_folder
+#: model_terms:ir.ui.view,arch_db:import_folder.view_import_folder_form
+msgid "Amount Due"
+msgstr "Monto Adeudado"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__message_attachment_count
+msgid "Attachment Count"
+msgstr "Contador de Adjuntos"
+
+#. module: import_folder
+#: model_terms:ir.actions.act_window,help:import_folder.import_folder_action
+msgid "No Import Folder created yet!"
+msgstr "Aun no se ha creado Carpeta de Importación !"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__bl
+msgid "B/L #"
+msgstr "B/L #"
+
+#. module: import_folder
+#: code:addons/import_folder/models/report_landed_cost.py:0
+msgid "B/L #"
+msgstr "B/L #"
+
+#. module: import_folder
+#: model_terms:ir.ui.view,arch_db:import_folder.view_import_folder_form
+msgid "Bill Date"
+msgstr "Fecha de facturación"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__cellar
+#: code:addons/import_folder/models/report_landed_cost.py:0
+msgid "Input Warehouse"
+msgstr "Bodega a la que Ingresa"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__real_days
+msgid "Import Time(Days)"
+msgstr "Duración de Importación(Días)"
+
+#. module: import_folder
+#: model:ir.model.fields.selection,name:import_folder.selection__import_folder__state__draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: import_folder
+#: model:ir.model.fields.selection,name:import_folder.selection__stock_landed_report__split_method__by_current_cost_price
+msgid "By Current Cost"
+msgstr "Por Costo Actual"
+
+#. module: import_folder
+#: model:ir.model.fields.selection,name:import_folder.selection__stock_landed_report__split_method__by_quantity
+msgid "By Quantity"
+msgstr "Por Cantidad"
+
+#. module: import_folder
+#: model:ir.model.fields.selection,name:import_folder.selection__stock_landed_report__split_method__by_volume
+msgid "By Volume"
+msgstr "Por Volumen"
+
+#. module: import_folder
+#: model:ir.model.fields.selection,name:import_folder.selection__stock_landed_report__split_method__by_weight
+msgid "By Weight"
+msgstr "Por Peso"
+
+#. module: import_folder
+#: model:ir.model.fields.selection,name:import_folder.selection__stock_landed_report__state__cancel
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_report__quantity
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: import_folder
+#: code:addons/import_folder/models/report_landed_cost.py:0
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: import_folder
+#: model_terms:ir.ui.view,arch_db:import_folder.view_account_invoice_import
+#: model_terms:ir.ui.view,arch_db:import_folder.view_account_payment_import
+#: model_terms:ir.ui.view,arch_db:import_folder.view_purchase_order_import
+#: model_terms:ir.ui.view,arch_db:import_folder.view_stock_landed_cost_import
+#: model_terms:ir.ui.view,arch_db:import_folder.view_stock_picking_import
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__import_folder
+#: model_terms:ir.ui.view,arch_db:import_folder.view_import_folder_form
+msgid "Import Folder"
+msgstr "Carpeta de Importación"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__import_id
+msgid "Parent Folder"
+msgstr "Carpeta padre"
+
+#. module: import_folder
+#: model:ir.actions.act_window,name:import_folder.import_folder_action
+msgid "Folders"
+msgstr "Carpetas"
+
+#. module: import_folder
+#: model_terms:ir.ui.view,arch_db:import_folder.view_import_folder_form
+msgid "Close Import"
+msgstr "Cerrar Importación"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: import_folder
+#: model:ir.model,name:import_folder.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__container
+#: code:addons/import_folder/models/report_landed_cost.py:0
+msgid "Container"
+msgstr "Contenedor"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_cost__cost_lines
+msgid "Cost Lines"
+msgstr "Lineas de costo"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_report__cost_id
+msgid "Cost #"
+msgstr "Costo #"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_report__additional_landed_cost
+msgid "Additional Landing Cost"
+msgstr "Costo Adicional de Aterrizaje"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_report__former_cost
+msgid "Previous Cost"
+msgstr "Costo Anterior"
+
+#. module: import_folder
+#: code:addons/import_folder/models/report_landed_cost.py:0
+msgid "Previous Cost"
+msgstr "Costo Anterior"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_report__former_cost_per_unit
+msgid "Previous Cost(Per unit)"
+msgstr "Costo Anterior(Por unidad)"
+
+#. module: import_folder
+#: code:addons/import_folder/models/report_landed_cost.py:0
+msgid "Previous Cost(Per unit)"
+msgstr "Costo Anterior(Por unidad)"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_report__final_cost
+msgid "Final Cost"
+msgstr "Costo Final"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_report__price_unit
+msgid "Unit Cost"
+msgstr "Costo Unitario"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__create_uid
+#: model:ir.model.fields,field_description:import_folder.field_import_folder_type__create_uid
+msgid "Created by"
+msgstr "Creado Por"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__create_date
+#: model:ir.model.fields,field_description:import_folder.field_import_folder_type__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_account_payment__account_debit_id
+msgid "Debit Account"
+msgstr "Cuenta Débito"
+
+#. module: import_folder
+#: model_terms:ir.ui.view,arch_db:import_folder.view_import_folder_form
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__dai
+msgid "DAI #"
+msgstr "DAI #"
+
+#. module: import_folder
+#: code:addons/import_folder/models/report_landed_cost.py:0
+msgid "DAI #"
+msgstr "DAI #"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_report__account_journal_id
+msgid "Journal"
+msgstr "Diario"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_account_account__display_name
+#: model:ir.model.fields,field_description:import_folder.field_account_move__display_name
+#: model:ir.model.fields,field_description:import_folder.field_account_payment__display_name
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__display_name
+#: model:ir.model.fields,field_description:import_folder.field_import_folder_type__display_name
+#: model:ir.model.fields,field_description:import_folder.field_purchase_order__display_name
+#: model:ir.model.fields,field_description:import_folder.field_res_partner__display_name
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_cost__display_name
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_cost_lines__display_name
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_report__display_name
+#: model:ir.model.fields,field_description:import_folder.field_stock_picking__display_name
+msgid "Display Name"
+msgstr "Nombre a Mostrar"
+
+#. module: import_folder
+#: model:ir.model.fields.selection,name:import_folder.selection__stock_landed_report__state__draft
+msgid "Draft Quotation"
+msgstr "Cotización en Borrador"
+
+#. module: import_folder
+#: model:ir.model.fields.selection,name:import_folder.selection__stock_landed_report__split_method__equal
+msgid "Equal"
+msgstr "Igual"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__state
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_report__state
+msgid "State"
+msgstr "Estado"
+
+#. module: import_folder
+#: model_terms:ir.ui.view,arch_db:import_folder.view_import_folder_form
+msgid "Vendor Bills"
+msgstr "Factura de proveedor"
+
+#. module: import_folder
+#: model_terms:ir.ui.view,arch_db:import_folder.view_import_folder_form
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__invoice_ids
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_report__date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__estimated_date
+#: code:addons/import_folder/models/report_landed_cost.py:0
+msgid "Estimated Arrival Date"
+msgstr "Fecha de Arribo Estimada"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__boarding_date
+#: code:addons/import_folder/models/report_landed_cost.py:0
+msgid "Shipping Date"
+msgstr "Fecha de Envío"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__admission_date
+#: code:addons/import_folder/models/report_landed_cost.py:0
+msgid "Entry Warehouse Date"
+msgstr "Fecha de Ingreso a Bodega"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__elaboration_date
+msgid "Date From"
+msgstr "Fecha desde"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canales)"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Contactos)"
+
+#. module: import_folder
+#: model:ir.model.fields,help:import_folder.field_import_folder__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: import_folder
+#: model:ir.model,name:import_folder.model_stock_landed_report
+#: model:ir.ui.menu,name:import_folder.stock_stock_landed_report_menu
+#: model_terms:ir.ui.view,arch_db:import_folder.view_stock_landed_cost_import
+msgid "Report Landed Cost"
+msgstr "Reporte de Gasto de envío "
+
+#. module: import_folder
+#: code:addons/import_folder/models/report_landed_cost.py:0
+msgid "Report Landed Cost"
+msgstr "Reporte de Gasto de envío "
+
+#. module: import_folder
+#: model_terms:ir.ui.view,arch_db:import_folder.view_landed_pivot
+#: model:ir.actions.act_window,name:import_folder.action_cost_report_all
+msgid "Landed Cost"
+msgstr "Gastos de Envío"
+
+#. module: import_folder
+#: model_terms:ir.actions.act_window,help:import_folder.action_cost_report_all
+#: model_terms:ir.ui.view,arch_db:import_folder.view_import_folder_form
+msgid "Print Report Landed Cost"
+msgstr "Generar Reporte de Gastos de Envio."
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_account_account__id
+#: model:ir.model.fields,field_description:import_folder.field_account_move__id
+#: model:ir.model.fields,field_description:import_folder.field_account_payment__id
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__id
+#: model:ir.model.fields,field_description:import_folder.field_import_folder_type__id
+#: model:ir.model.fields,field_description:import_folder.field_purchase_order__id
+#: model:ir.model.fields,field_description:import_folder.field_res_partner__id
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_cost__id
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_cost_lines__id
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_report__id
+#: model:ir.model.fields,field_description:import_folder.field_stock_picking__id
+msgid "ID"
+msgstr ""
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: import_folder
+#: model:ir.model.fields,help:import_folder.field_import_folder__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: import_folder
+#: model:ir.model.fields,help:import_folder.field_import_folder__message_needaction
+#: model:ir.model.fields,help:import_folder.field_import_folder__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: import_folder
+#: model:ir.model.fields,help:import_folder.field_import_folder__message_has_error
+#: model:ir.model.fields,help:import_folder.field_import_folder__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_account_bank_statement_line__import_ids
+#: model:ir.model.fields,field_description:import_folder.field_account_move__import_ids
+msgid "Import"
+msgstr ""
+
+#. module: import_folder
+#: model_terms:ir.ui.view,arch_db:import_folder.view_import_folder_tree
+#: model:ir.model.fields,field_description:import_folder.field_account_payment__import_ids
+#: model:ir.model.fields,field_description:import_folder.field_purchase_order__import_ids
+#: model:ir.model.fields,field_description:import_folder.field_stock_picking__import_ids
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_cost__import_ids
+msgid "Imports"
+msgstr "Importaciones"
+
+#. module: import_folder
+#: model:ir.model,name:import_folder.model_import_folder
+#: model:ir.ui.menu,name:import_folder.menu_import_folder
+msgid "Import"
+msgstr "Importación"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_cost_lines__invoice_id
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: import_folder
+#: model_terms:ir.ui.view,arch_db:import_folder.view_import_folder_form
+msgid "Invoice Date"
+msgstr "Fecha de Factura"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__message_is_follower
+msgid "Is Follower"
+msgstr "Es Seguidor"
+
+#. module: import_folder
+#: model:ir.model,name:import_folder.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento Contable"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_account_account____last_update
+#: model:ir.model.fields,field_description:import_folder.field_account_move____last_update
+#: model:ir.model.fields,field_description:import_folder.field_account_payment____last_update
+#: model:ir.model.fields,field_description:import_folder.field_import_folder____last_update
+#: model:ir.model.fields,field_description:import_folder.field_import_folder_type____last_update
+#: model:ir.model.fields,field_description:import_folder.field_purchase_order____last_update
+#: model:ir.model.fields,field_description:import_folder.field_res_partner____last_update
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_cost____last_update
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_cost_lines____last_update
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_report____last_update
+#: model:ir.model.fields,field_description:import_folder.field_stock_picking____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__write_uid
+#: model:ir.model.fields,field_description:import_folder.field_import_folder_type__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__write_date
+#: model:ir.model.fields,field_description:import_folder.field_import_folder_type__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: import_folder
+#: model_terms:ir.ui.view,arch_db:import_folder.view_import_folder_form
+msgid "Settlements"
+msgstr "Liquidaciones"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_report__amount_total
+msgid "Amount Total"
+msgstr "Monto Total"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_report__account_move_id
+msgid "Account Movements"
+msgstr "Movimiento de Cuenta"
+
+#. module: import_folder
+#: model_terms:ir.ui.view,arch_db:import_folder.view_import_folder_form
+msgid "Pickings"
+msgstr "Movimientos"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_report__split_method
+msgid "Division Method"
+msgstr "Método de división"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder_type__name
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: import_folder
+#: model_terms:ir.ui.view,arch_db:import_folder.view_import_folder_form
+msgid "Import Name"
+msgstr "Nombre de Importación"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_report__name_product
+msgid "Product Name"
+msgstr "Nombre del Producto"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: import_folder
+#: model:ir.model.fields,help:import_folder.field_import_folder__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: import_folder
+#: model:ir.model.fields,help:import_folder.field_import_folder__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: import_folder
+#: model:ir.model.fields,help:import_folder.field_import_folder__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: import_folder
+#: model_terms:ir.ui.view,arch_db:import_folder.view_import_folder_form
+#: model:ir.model,name:import_folder.model_account_payment
+msgid "Payments"
+msgstr "Pagos"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__payment_ids
+msgid "Payment"
+msgstr "Pago"
+
+#. module: import_folder
+#: model_terms:ir.ui.view,arch_db:import_folder.view_import_folder_form
+msgid "Orders"
+msgstr "Pedidos"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_report__weight
+msgid "Weight"
+msgstr "Peso"
+
+#. module: import_folder
+#: code:addons/import_folder/models/report_landed_cost.py:0
+msgid "Weight"
+msgstr "Peso"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_report__product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: import_folder
+#: code:addons/import_folder/models/report_landed_cost.py:0
+msgid "Product"
+msgstr "Producto"
+
+#. module: import_folder
+#: code:addons/import_folder/models/report_landed_cost.py:0
+msgid "Unit Measure"
+msgstr "Unidad de Medida"
+
+#. module: import_folder
+#: code:addons/import_folder/models/report_landed_cost.py:0
+msgid "Final Product Cost(Per unit)"
+msgstr "Costo final de Producto (Por unidad)"
+
+#. module: import_folder
+#: code:addons/import_folder/models/report_landed_cost.py:0
+msgid "New Cost"
+msgstr "Coste Nuevo"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__purchase_ids
+msgid "Purchases"
+msgstr "Compras"
+
+#. module: import_folder
+#: model:ir.model,name:import_folder.model_purchase_order
+msgid "Purchase Order"
+msgstr "Orden de Compra"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_report__name
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__customs_regime
+#: code:addons/import_folder/models/report_landed_cost.py:0
+msgid "Customs Regime"
+msgstr "Regimén de Aduana"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_account_bank_statement_line__require_import
+#: model:ir.model.fields,field_description:import_folder.field_account_move__require_import
+#: model:ir.model.fields,field_description:import_folder.field_account_payment__require_import
+#: model:ir.model.fields,field_description:import_folder.field_purchase_order__require_import
+msgid "Required Import"
+msgstr "Importación Requerida"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__responsable
+msgid "Responsable"
+msgstr ""
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: import_folder
+#: model:ir.model.fields.selection,name:import_folder.selection__stock_landed_report__state__done
+msgid "Sales Done"
+msgstr "Ventas Realizadas"
+
+#. module: import_folder
+#: model_terms:ir.ui.view,arch_db:import_folder.view_import_folder_form
+msgid "Sales Person"
+msgstr "Vendedor"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_account_account__request_import
+#: model:ir.model.fields,field_description:import_folder.field_res_partner__request_import
+#: model:ir.model.fields,field_description:import_folder.field_res_users__request_import
+msgid "Request Import Folder"
+msgstr "Solicita Carpeta de Importación"
+
+#. module: import_folder
+#: model_terms:ir.ui.view,arch_db:import_folder.view_import_folder_form
+msgid "Source Document"
+msgstr "Documento Origen"
+
+#. module: import_folder
+#: model:ir.model.fields,help:import_folder.field_import_folder__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__stock_ids
+msgid "Stock"
+msgstr "Inventario"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__stock_landed_ids
+msgid "Stock Landed"
+msgstr "Inventario Aterrizado"
+
+#. module: import_folder
+#: model:ir.model,name:import_folder.model_stock_landed_cost
+msgid "Stock Landed Cost"
+msgstr "Costo de Envío de Existencia"
+
+#. module: import_folder
+#: model:ir.model,name:import_folder.model_stock_landed_cost_lines
+msgid "Stock Landed Cost Line"
+msgstr "Líneas de Costo de Envío de Existencia"
+
+#. module: import_folder
+#: model_terms:ir.ui.view,arch_db:import_folder.view_import_folder_form
+msgid "Tax"
+msgstr "Impuesto"
+
+#. module: import_folder
+#: model_terms:ir.ui.view,arch_db:import_folder.view_import_folder_form
+msgid "Tax Excluded"
+msgstr "Sin Impuestos"
+
+#. module: import_folder
+#: model:ir.model.fields.selection,name:import_folder.selection__import_folder__state__close
+msgid "Finished"
+msgstr "Terminado"
+
+#. module: import_folder
+#: code:addons/import_folder/models/account_payment.py:0
+#, python-format
+msgid ""
+"There is no Transfer Account defined in the accounting settings. Please "
+"define one to be able to confirm this transfer."
+msgstr ""
+"No hay una cuenta de transferencia definida en la configuración de contabilidad. Por favor"
+"defina una para poder confirmar esta transferencia."
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__arrival_days
+#: code:addons/import_folder/models/report_landed_cost.py:0
+msgid "Arrival Time in Days"
+msgstr "Tiempo de Llegada en días"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__processing_time
+#: code:addons/import_folder/models/report_landed_cost.py:0
+msgid "Customs Processing Time"
+msgstr "Tiempo de Trámite Aduanero"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__import_folder_father
+msgid "Have Parent Folder?"
+msgstr "Tiene carpeta padre"
+
+#. module: import_folder
+#: model_terms:ir.ui.view,arch_db:import_folder.view_import_folder_form
+msgid "Total"
+msgstr ""
+
+#. module: import_folder
+#: model:ir.model,name:import_folder.model_stock_picking
+msgid "Transfer"
+msgstr "Transferencia"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_cost__picking_ids
+msgid "Transfers"
+msgstr "Transferencias"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__type_import
+#: model:ir.model,name:import_folder.model_import_folder_type
+msgid "Type Import"
+msgstr "Tipo de Importación"
+
+#. module: import_folder
+#: model:ir.model.fields,help:import_folder.field_import_folder__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_cost__valuation_adjustment_lines
+msgid "Valuation Adjustments"
+msgstr "Ajustes de Valoración"
+
+#. module: import_folder
+#: model_terms:ir.ui.view,arch_db:import_folder.view_import_folder_form
+msgid "Vendor"
+msgstr "Proveedor"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_import_folder__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: import_folder
+#: model:ir.model.fields,help:import_folder.field_import_folder__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: import_folder
+#: code:addons/import_folder/models/purchase_order.py:0
+#, python-format
+msgid "You must set a Vendor Location for this partner %s"
+msgstr "Debe establecer una ubicación de proveedor para %s."
+
+#. module: import_folder
+#: model_terms:ir.ui.view,arch_db:import_folder.view_cost_product_pivot
+#: model_terms:ir.ui.view,arch_db:import_folder.view_cost_product_search
+msgid "Stock Landed Analysis"
+msgstr "Análisis de Inventario Ingresado"
+
+#. module: import_folder
+#: model:ir.model.fields,field_description:import_folder.field_stock_landed_report__volume
+msgid "Volumen"
+msgstr "Volumen"
+
+#. module: import_folder
+#: code:addons/import_folder/models/report_landed_cost.py:0
+msgid "Volumen"
+msgstr "Volumen"
+
+#. module: import_folder
+#: code:addons/import_folder/models/account_invoice.py:0
+#: code:addons/import_folder/models/purchase_order.py:0
+#, python-format
+msgid "You can't save if you don't choose an import folder."
+msgstr "No puede guardar si no escoje una carpeta de importación."
+
+#. module: import_folder
+#: code:addons/import_folder/models/report_landed_cost.py:0
+#, python-format
+msgid "Type"
+msgstr "Tipo"

@@ -1,0 +1,16 @@
+<odoo>
+    <!-- Purchase Requisition Type -->
+
+    <record model="ir.ui.view" id="view_account_move_import">
+        <field name="name">account.move.import</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="purchase.view_invoice_supplier_purchase_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='vendor_bill_purchase_id']" position="after">
+                <field name="require_import" invisible='1'/>
+                <field name="import_ids" domain="[('state','=','open')]" string="Import Folder" attrs="{'invisible':[('move_type','!=','in_invoice'),('require_import','=',False)],'required':[('require_import', '=', True)]}"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

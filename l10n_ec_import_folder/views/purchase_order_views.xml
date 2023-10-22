@@ -1,0 +1,15 @@
+<odoo>
+
+    <record model="ir.ui.view" id="view_purchase_order_import">
+        <field name="name">purchase.order.import</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_ref']" position="after">
+                <field name="require_import" invisible='1'/>
+                <field name="import_ids" string="Import Folder" domain="[('state','=','open')]"
+                attrs="{'required':[('require_import', '=', True)], 'invisible':[('require_import','=',False)]}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

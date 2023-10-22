@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_cost_product_pivot" model="ir.ui.view">
+         <field name="name">stock.landed.report.pivot</field>
+         <field name="model">stock.landed.report</field>
+         <field name="arch" type="xml">
+             <pivot string="Stock Landed Analysis" disable_linking="True">
+                 <field name="name_product" type="row"/>
+                 <field name="date" interval="month" type="col"/>
+             </pivot>
+         </field>
+    </record>
+
+    <record id="view_cost_product_search" model="ir.ui.view">
+        <field name="name">stock.landed.report.search</field>
+        <field name="model">stock.landed.report</field>
+        <field name="arch" type="xml">
+            <search string="Stock Landed Analysis">
+                <field name="date"/>
+            </search>
+        </field>
+    </record>
+
+
+     <record id="action_cost_report_all" model="ir.actions.act_window">
+        <field name="name">Landed Cost</field>
+        <field name="res_model">stock.landed.report</field>
+        <field name="view_mode">pivot,form</field>
+        <field name="view_id"></field> 
+        <field name="search_view_id" ref="view_cost_product_search"/>
+        <field name="help">Print Report Landed Cost</field>
+    </record>
+
+
+    <menuitem 
+        id="stock_stock_landed_report_menu" 
+        name="Reporte de Gastos de Envio"
+        action="action_cost_report_all" 
+        parent="stock.menu_warehouse_report" 
+        />
+</odoo>

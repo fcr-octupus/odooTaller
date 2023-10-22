@@ -1,0 +1,56 @@
+<odoo>
+    <!-- Purchase Requisition Type -->
+ 
+     <record model="ir.ui.view" id="view_stock_landed_cost_import">
+         <field name="name">stock.landed.cost.import</field>
+         <field name="model">stock.landed.cost</field>
+         <field name="inherit_id" ref="stock_landed_costs.view_stock_landed_cost_form" />
+         <field name="arch" type="xml">
+             
+             <xpath expr="//field[@name='picking_ids']" position="before">
+                 <field name="import_ids" string="Import Folder" domain="[('state','=','open')]"/>
+             </xpath>
+             <xpath expr="//header" position="inside">
+                 <button name="landed_costs_excel_action" string="Report Landed Cost" type="object" icon="fa-print" class="oe_inline oe_stat_button oe_right"  attrs="{'invisible': [('import_ids', '=', False)]}" />
+             </xpath>
+             <xpath expr="//tree/field[@name='price_unit']" position="after">
+                 <field name="invoice_id" invisible="1" required="1"/>
+             </xpath>
+            
+         </field>
+     </record>
+ 
+     <record model="ir.ui.view" id="view_landed_pivot">
+         <field name="name">stock.landed.cost.pivot</field>
+         <field name="model">stock.landed.cost</field>
+         <field name="arch" type="xml">
+ 
+             <pivot string="Landed Cost" display_quantity="true">
+                 <field name="cost_lines" type="measure"/>
+                 <field name="name" type="row"/>
+             </pivot>
+         </field>
+     </record>
+ 
+ 
+     <!-- <delete model="ir.ui.menu" id="stock_landed_costs.menu_stock_landed_cost" /> -->
+ 
+     
+     <!-- <record id='action_stock_landed_cost_inherit' model='ir.actions.act_window'>
+         <field name="name">Landed Costs</field>
+         <field name="res_model">stock.landed.cost</field>
+         <field name="view_mode">tree,form,kanban,pivot</field>
+         <field name="context">{}</field>
+         <field name="help" type="html">
+             <p class="o_view_nocontent_smiling_face">
+                 Create a new landed cost
+             </p>
+         </field>
+     </record>
+ 
+     <menuitem action="action_stock_landed_cost_inherit" name="Gastos de Envio" parent="stock.menu_stock_warehouse_mgmt" id="menu_stock_landed_cost" sequence="115"/> -->
+ 
+ 
+ 
+ 
+ </odoo>

@@ -1,0 +1,16 @@
+<odoo>
+   <!-- Purchase Requisition Type -->
+
+    <record model="ir.ui.view" id="view_account_invoice_import">
+        <field name="name">account.move.import</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <!-- view_account_invoice_filter -->
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='ref']" position="after">
+                <field name="import_ids" domain="[('state','=','open')]" string="Import Folder" />
+            </xpath>
+        </field>
+    </record>
+  
+</odoo>

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+l16n_ec_custom_accounting.access_guia_remision,guia_remision,l16n_ec_custom_accounting.model_guia_remision,base.group_user,1,0,0,0
+l16n_ec_custom_accounting.access_guia_remision_manager,guia_remision,l16n_ec_custom_accounting.model_guia_remision,base.group_user,1,1,1,1
+l16n_ec_custom_accounting.access_l10n_latam_document_type_id,model_guia_remision,l16n_ec_custom_accounting.model_guia_remision,base.group_user,1,1,1,1
+l16n_ec_custom_accounting.access_diario,model_guia_remision,l16n_ec_custom_accounting.model_guia_remision,base.group_user,1,1,1,1

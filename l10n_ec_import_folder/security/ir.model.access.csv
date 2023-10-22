@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_import_folder,access_import_folder,model_import_folder,purchase.group_purchase_manager,1,1,1,0
+access_import_folder_admin,access_import_folder_admin,model_import_folder,account.group_account_user,1,1,1,1
+access_stock_landed_report_user,report.stock.landed.user,model_stock_landed_report,stock.group_stock_user,1,1,1,0
+access_stock_landed_report_manager,report.stock.landed.manager,model_stock_landed_report,account.group_account_user,1,1,1,0
+access_import_folder_type,access_import_folder_type,model_import_folder_type,purchase.group_purchase_user,1,1,1,0
+access_import_folder_type,access_import_folder_type,model_import_folder_type,account.group_account_user,1,1,1,1

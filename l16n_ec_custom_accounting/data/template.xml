@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="guia_remision_template">
+            <guiaRemision id="comprobante" version="version0">
+                <!-- <ambiente t-out="l10n_ec_is_demo_environment()" /> 
+                <t t-set="street" t-value="guia_remision.ambiente" />
+                <t t-set="in_production" t-value="guia_remision.tipoEmision" />
+                <t t-set="test_name" t-value="guia_remision.razonSocial" />-->
+                <infoTributaria>
+                    <ambiente t-out="'2' if in_production else '1'"/>
+                    <tipoEmision>1</tipoEmision>
+                    <razonSocial t-out="clean_str(company.l10n_ec_legal_name) if in_production else test_name"/>
+                    <nombreComercial t-out="clean_str(company.partner_id.name) if in_production else test_name"/>
+                    <!-- <ruc t-out="company.partner_id.vat"/> -->
+                    <!-- <claveAcceso t-out="move.l10n_ec_authorization_number"/> -->
+                    <!-- <codDoc t-out="'06' if is_withhold else move.l10n_latam_document_type_id.code"/> -->
+                    <!-- <estab t-out="journal.l10n_ec_entity"/>
+                    <ptoEmi t-out="journal.l10n_ec_emission"/> -->
+                    <secuencial t-out="sequential"/>
+                    <dirMatriz t-out="address"/>
+                    <agenteRetencion t-out="company.l10n_ec_withhold_agent_number"/>
+                    <contribuyenteRimpe t-if="company.l10n_ec_regime == 'rimpe'" t-out="'CONTRIBUYENTE RÉGIMEN RIMPE'"/>
+                </infoTributaria>
+                <infoGuiaRemision>
+                    <dirEstablecimiento t-out="dirEstablecimiento0" />
+                    <dirPartida t-out="dirPartida0" />
+                    <razonSocialTransportista t-out="razonSocialTransportista0" />
+                    <tipoIdentificacionTransportista t-out="tipoIdentificacionTransportista0" />
+                    <rucTransportista t-out="rucTransportista0" />
+                    <rise t-out="rise0" />
+                    <obligadoContabilidad t-out="obligadoContabilidad" />
+                    <contribuyenteEspecial t-out="contribuyenteEspecial" />
+                    <fechaIniTransporte t-out="fechaIniTransporte" />
+                    <fechaFinTransporte t-out="fechaFinTransporte" />
+                    <placa t-out="placa0" />
+                </infoGuiaRemision>
+                <destinatarios>
+                    <destinatario>
+                        <identificacionDestinatario t-out="identificacionDestin" />
+                        <razonSocialDestinatario t-out="razonSocialDestinatario0" />
+                        <dirDestinatario t-out="dirDestinatario0" />
+                        <motivoTraslado t-out="motivoTraslado0" />
+                        <docAduaneroUnico t-out="docAduaneroUnico0" />
+                        <codEstabDestino t-out="codEstabDestino" />
+                        <ruta t-out="ruta0" />
+                        <codDocSustento t-out="codDocSustento" />
+                        <numDocSustento t-out="numDocSustento" />
+                        <numAutDocSustento t-out="numAutDocSustento" />
+                        <fechaEmisionDocSustento t-out="fechaEmisionDocSustento" />
+                        <detalles>
+                            <detalle>
+                                <codigoInterno t-out="codigoInterno0" />
+                                <codigoAdicional t-out="codigoAdicional0" />
+                                <descripcion t-out="descripcion0" />
+                                <cantidad t-out="cantidad0" />
+                                <detallesAdicionales>
+                                </detallesAdicionales>
+                            </detalle>
+                            <detalle>
+                                <codigoInterno t-out="codigoInterno1" />
+                                <codigoAdicional t-out="codigoAdicional1" />
+                                <descripcion t-out="descripcion1" />
+                                <cantidad t-out="cantidad1" />
+                                <detallesAdicionales>
+                                </detallesAdicionales>
+                            </detalle>
+                        </detalles>
+                    </destinatario>
+                </destinatarios>
+                <maquinaFiscal>
+                    <marca t-out="marca0" />
+                    <modelo t-out="modelo0" />
+                    <serie t-out="serie0" />
+                </maquinaFiscal>
+                <infoAdicional>
+                    <campoAdicional nombre="nombre0" t-out="campoAdicional0" />
+                    <campoAdicional nombre="nombre1" t-out="campoAdicional1" />
+                </infoAdicional> 
+            </guiaRemision>
+        </template>
+
+    </data>
+</odoo>
